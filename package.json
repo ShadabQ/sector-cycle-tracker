@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.12",
+    "@types/react": "19.2.14",
     "drizzle-kit": "^0.30.0",
     "typescript": "^5.8.0"
   }
