@@ -1,7 +1,1 @@
-{"timestamp":"00:00:01.945","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:05.355","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:00:05.586","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:00:07.264","source":"Server","level":"ERROR","message":"TypeError: Cannot read properties of undefined (reading 'toUpperCase')"}
-{"timestamp":"00:00:07.548","source":"Server","level":"ERROR","message":"TypeError: Cannot read properties of undefined (reading 'toUpperCase')"}
-{"timestamp":"00:00:12.338","source":"Server","level":"ERROR","message":"TypeError: Cannot read properties of undefined (reading 'toUpperCase')"}
-{"timestamp":"00:00:13.509","source":"Server","level":"ERROR","message":"TypeError: Cannot read properties of undefined (reading 'toUpperCase')"}
+{"timestamp":"00:00:01.007","source":"Server","level":"LOG","message":""}
