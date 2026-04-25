@@ -1,9 +1,19 @@
-import './globals.css';
+import type { Metadata } from 'next';
+import './globals.css';           // ← This line was failing
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {
+  title: 'Sector Cycle Tracker',
+  description: 'NSE Sector Rotation Dashboard by ShadabQ',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
