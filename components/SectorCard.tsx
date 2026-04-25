@@ -18,48 +18,45 @@ export default function SectorCard({ sector, onRefresh }: any) {
   };
 
   return (
-    <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 hover:shadow-2xl transition-all">
-      {/* Header */}
-      <div className="flex justify-between items-start mb-6">
-        <h3 className="text-xl font-semibold">{sector.name}</h3>
-        <span
-          className={`px-4 py-1 text-xs font-medium text-white rounded-full ${phaseColors[phase]}`}
-        >
+    <div className="rounded-[2rem] border border-white/10 bg-zinc-950/90 p-6 shadow-2xl shadow-black/20 transition hover:-translate-y-1">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between mb-6">
+        <div>
+          <h3 className="text-2xl font-semibold tracking-tight">{sector.name}</h3>
+          <p className="mt-2 text-sm uppercase tracking-[0.24em] text-zinc-400">{sector.indexSlug}</p>
+        </div>
+
+        <span className={`inline-flex items-center rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white ${phaseColors[phase]}`}>
           {phase}
         </span>
       </div>
 
-      {/* Metrics */}
-      <div className="flex justify-between mb-8">
-        <div>
+      <div className="grid gap-5 sm:grid-cols-2 mb-8">
+        <div className="rounded-3xl bg-zinc-900/80 p-5">
           <p className="text-zinc-400 text-sm">Price Change</p>
-          <p
-            className={`text-3xl font-bold ${
-              sector.priceChange >= 0 ? 'text-emerald-400' : 'text-red-400'
-            }`}
-          >
+          <p className={`mt-3 text-4xl font-semibold ${sector.priceChange >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
             {sector.priceChange?.toFixed(2)}%
           </p>
         </div>
-        <div className="text-right">
+        <div className="rounded-3xl bg-zinc-900/80 p-5">
           <p className="text-zinc-400 text-sm">Last Price</p>
-          <p className="text-3xl font-bold text-white">
-            {sector.lastPrice?.toFixed(0)}
-          </p>
+          <p className="mt-3 text-4xl font-semibold text-white">{sector.lastPrice?.toFixed(0)}</p>
         </div>
       </div>
 
-      {/* Cycle Slider (native HTML range + Tailwind) */}
       <div className="mb-8">
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-sm font-medium text-zinc-300">Cycle phase slider</p>
+          <span className="text-xs uppercase tracking-[0.24em] text-zinc-500">{phase}</span>
+        </div>
         <input
           type="range"
           min="0"
           max="3"
           value={phaseIndex}
           onChange={(e) => setPhase(phases[parseInt(e.target.value)])}
-          className="w-full accent-blue-500 bg-zinc-800 h-2 rounded-full cursor-pointer"
+          className="w-full accent-sky-400 h-2 rounded-full bg-zinc-800 cursor-pointer"
         />
-        <div className="flex justify-between text-xs text-zinc-400 mt-2">
+        <div className="mt-3 flex justify-between text-[11px] uppercase tracking-[0.28em] text-zinc-500">
           <span>Early</span>
           <span>Mid</span>
           <span>Late</span>
@@ -67,18 +64,19 @@ export default function SectorCard({ sector, onRefresh }: any) {
         </div>
       </div>
 
-      {/* Notes */}
-      <textarea
-        value={notes}
-        onChange={(e) => setNotes(e.target.value)}
-        placeholder="Notes, order book, risks, tailwinds..."
-        className="w-full h-24 bg-zinc-950 border border-zinc-700 rounded-xl p-4 text-sm resize-none focus:outline-none focus:border-blue-500"
-      />
+      <div className="mb-6">
+        <label className="mb-3 block text-sm font-medium text-zinc-300">Notes</label>
+        <textarea
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+          placeholder="Add observations, order book cues, or risk notes..."
+          className="h-28 w-full rounded-3xl border border-zinc-800 bg-zinc-950/80 p-4 text-sm text-white placeholder:text-zinc-500 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+        />
+      </div>
 
-      {/* Refresh Button */}
       <button
         onClick={onRefresh}
-        className="w-full mt-6 flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 transition-colors text-white font-medium py-3 px-6 rounded-xl"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-3xl bg-slate-100 px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-amber-400"
       >
         <RefreshCw className="w-4 h-4" />
         Refresh NSE Data

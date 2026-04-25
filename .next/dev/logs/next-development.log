@@ -1,3 +1,8 @@
 {"timestamp":"00:00:01.718","source":"Server","level":"LOG","message":""}
 {"timestamp":"00:00:06.669","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
 {"timestamp":"00:00:07.082","source":"Server","level":"ERROR","message":"NSE fetch error: SqliteError: no such table: sectors"}
+{"timestamp":"00:01:27.368","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:05:06.500","source":"Server","level":"LOG","message":"✓ Compiled in 94ms"}
+{"timestamp":"00:05:25.594","source":"Server","level":"LOG","message":"✓ Compiled in 8ms"}
+{"timestamp":"00:06:49.987","source":"Server","level":"LOG","message":"✓ Compiled in 102ms"}
+{"timestamp":"00:08:15.813","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
