@@ -1,238 +1,62 @@
-[00:00:01.306] Server  LOG     It looks like you're trying to use TypeScript but do not have the required package(s) installed.
-Installing dependencies
-
-If you are not trying to use TypeScript, please remove the tsconfig.json file from your package root (and any TypeScript files in your app and pages directories).
-
-[00:00:01.325] Server  LOG     
-[00:00:01.326] Server  LOG     Installing devDependencies (npm):
-[00:00:01.326] Server  LOG     - @types/react
-[00:00:01.326] Server  LOG     
-[00:00:07.749] Server  LOG     
-[00:00:07.761] Server  LOG     
-[00:00:07.761] Server  LOG        We detected TypeScript in your project and created a tsconfig.json file for you.
-[00:00:08.027] Server  LOG      ✓ Ready in 7.6s
-[00:00:14.759] Server  LOG      ○ Compiling / ...
-[00:00:15.962] Server  ERROR    ⨯ ./app/layout.tsx:1:1
-Module not found: Can't resolve './globals.css'
-> 1 | import './globals.css';
-    | ^^^^^^^^^^^^^^^^^^^^^^^
-  2 |
-  3 | export default function RootLayout({ children }: { children: React.ReactNode }) {
-  4 |   return (
-
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-
-./app/page.tsx:3:1
-Module not found: Can't resolve '@/components/SectorCard'
-  1 | 'use client';
-  2 | import { useEffect, useState } from 'react';
-> 3 | import SectorCard from '@/components/SectorCard';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 | import { Button } from '@/components/ui/button';
-  5 | import { RefreshCw } from 'lucide-react';
-  6 |
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-
-./app/page.tsx:4:1
-Module not found: Can't resolve '@/components/ui/button'
-  2 | import { useEffect, useState } from 'react';
-  3 | import SectorCard from '@/components/SectorCard';
-> 4 | import { Button } from '@/components/ui/button';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import { RefreshCw } from 'lucide-react';
-  6 |
-  7 | export default function Home() {
-
-
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:18.974] Server  LOG      ○ Compiling /_error ...
-[00:00:21.782] Browser ERROR   uncaughtError: Error: ./app/layout.tsx:1:1
-Module not found: Can't resolve './globals.css'
-> 1 | import './globals.css';
-    | ^^^^^^^^^^^^^^^^^^^^^^^
-  2 |
-  3 | export default function RootLayout({ children }: { children: React.ReactNode }) {
-  4 |   return (
-
-
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:21.921] Browser ERROR   ./app/layout.tsx:1:1
-Module not found: Can't resolve './globals.css'
-> 1 | import './globals.css';
-    | ^^^^^^^^^^^^^^^^^^^^^^^
-  2 |
-  3 | export default function RootLayout({ children }: { children: React.ReactNode }) {
-  4 |   return (
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:21.921] Browser ERROR   ./app/page.tsx:3:1
-Module not found: Can't resolve '@/components/SectorCard'
-  1 | 'use client';
-  2 | import { useEffect, useState } from 'react';
-> 3 | import SectorCard from '@/components/SectorCard';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 | import { Button } from '@/components/ui/button';
-  5 | import { RefreshCw } from 'lucide-react';
-  6 |
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:21.921] Browser ERROR   ./app/page.tsx:4:1
-Module not found: Can't resolve '@/components/ui/button'
-  2 | import { useEffect, useState } from 'react';
-  3 | import SectorCard from '@/components/SectorCard';
-> 4 | import { Button } from '@/components/ui/button';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import { RefreshCw } from 'lucide-react';
-  6 |
-  7 | export default function Home() {
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:22.027] Browser ERROR   ./app/layout.tsx:1:1
-Module not found: Can't resolve './globals.css'
-> 1 | import './globals.css';
-    | ^^^^^^^^^^^^^^^^^^^^^^^
-  2 |
-  3 | export default function RootLayout({ children }: { children: React.ReactNode }) {
-  4 |   return (
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:22.027] Browser ERROR   ./app/page.tsx:3:1
-Module not found: Can't resolve '@/components/SectorCard'
-  1 | 'use client';
-  2 | import { useEffect, useState } from 'react';
-> 3 | import SectorCard from '@/components/SectorCard';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 | import { Button } from '@/components/ui/button';
-  5 | import { RefreshCw } from 'lucide-react';
-  6 |
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:22.027] Browser ERROR   ./app/page.tsx:4:1
-Module not found: Can't resolve '@/components/ui/button'
-  2 | import { useEffect, useState } from 'react';
-  3 | import SectorCard from '@/components/SectorCard';
-> 4 | import { Button } from '@/components/ui/button';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import { RefreshCw } from 'lucide-react';
-  6 |
-  7 | export default function Home() {
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:22.225] Browser ERROR   ./app/layout.tsx:1:1
-Module not found: Can't resolve './globals.css'
-> 1 | import './globals.css';
-    | ^^^^^^^^^^^^^^^^^^^^^^^
-  2 |
-  3 | export default function RootLayout({ children }: { children: React.ReactNode }) {
-  4 |   return (
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:22.225] Browser ERROR   ./app/page.tsx:3:1
-Module not found: Can't resolve '@/components/SectorCard'
-  1 | 'use client';
-  2 | import { useEffect, useState } from 'react';
-> 3 | import SectorCard from '@/components/SectorCard';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  4 | import { Button } from '@/components/ui/button';
-  5 | import { RefreshCw } from 'lucide-react';
-  6 |
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:22.225] Browser ERROR   ./app/page.tsx:4:1
-Module not found: Can't resolve '@/components/ui/button'
-  2 | import { useEffect, useState } from 'react';
-  3 | import SectorCard from '@/components/SectorCard';
-> 4 | import { Button } from '@/components/ui/button';
-    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  5 | import { RefreshCw } from 'lucide-react';
-  6 |
-  7 | export default function Home() {
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
+{"timestamp":"00:00:00.709","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:00.710","source":"Server","level":"LOG","message":"  We detected TypeScript in your project and reconfigured your tsconfig.json file for you. Strict-mode is set to false by default."}
+{"timestamp":"00:00:00.710","source":"Server","level":"LOG","message":"  The following mandatory changes were made to your tsconfig.json:\n"}
+{"timestamp":"00:00:00.710","source":"Server","level":"LOG","message":"  \t- moduleResolution was set to bundler (to match modern bundler resolution)"}
+{"timestamp":"00:00:00.710","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:00.826","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:11.506","source":"Server","level":"ERROR","message":"⨯ ./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\n\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n\n\n./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n\n\n./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:15.110","source":"Browser","level":"ERROR","message":"uncaughtError: Error: ./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\n\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:15.144","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mUncaught Error: ./app/layout.tsx:2:1\\nModule not found: Can't resolve './globals.css'\\n  1 | import type { Metadata } from 'next';\\n> 2 | import './globals.css';           // ← This line was failing\\n    | ^^^^^^^^^^^^^^^^^^^^^^^\\n  3 |\\n  4 | export const metadata: Metadata = {\\n  5 |   title: 'Sector Cycle Tracker',\\n\\n\\n\\nhttps://nextjs.org/docs/messages/module-not-found\\n\\n\\u001b[39m\\n\\u001b[31m    at <unknown> (Error: ./app/layout.tsx:2:1)\\n    at <unknown> (https://nextjs.org/docs/messages/module-not-found)\\n    at <unknown> (Error: (./app/layout.tsx:2:1)\\n    at <unknown> (https://nextjs.org/docs/messages/module-not-found)\\u001b[39m\""}
+{"timestamp":"00:00:15.144","source":"Browser","level":"ERROR","message":"\u001b[31mUncaught Error: ./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\n\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n\u001b[39m\n\u001b[31m    at <unknown> (Error: ./app/layout.tsx:2:1)\n    at <unknown> (https://nextjs.org/docs/messages/module-not-found)\n    at <unknown> (Error: (./app/layout.tsx:2:1)\n    at <unknown> (https://nextjs.org/docs/messages/module-not-found)\u001b[39m"}
+{"timestamp":"00:00:15.251","source":"Browser","level":"ERROR","message":"./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.251","source":"Browser","level":"ERROR","message":"./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.251","source":"Browser","level":"ERROR","message":"./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.309","source":"Server","level":"ERROR","message":"[browser] \"./app/layout.tsx:2:1\\nModule not found: Can't resolve './globals.css'\\n  1 | import type { Metadata } from 'next';\\n> 2 | import './globals.css';           // ← This line was failing\\n    | ^^^^^^^^^^^^^^^^^^^^^^^\\n  3 |\\n  4 | export const metadata: Metadata = {\\n  5 |   title: 'Sector Cycle Tracker',\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.309","source":"Browser","level":"ERROR","message":"./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.310","source":"Server","level":"ERROR","message":"[browser] \"./app/page.tsx:3:1\\nModule not found: Can't resolve '@/components/SectorCard'\\n  1 | 'use client';\\n  2 | import { useEffect, useState } from 'react';\\n> 3 | import SectorCard from '@/components/SectorCard';\\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  4 | import { Button } from '@/components/ui/button';\\n  5 | import { RefreshCw } from 'lucide-react';\\n  6 |\\n\\nImport traces:\\n  Client Component Browser:\\n    ./app/page.tsx [Client Component Browser]\\n    ./app/page.tsx [Server Component]\\n\\n  Client Component SSR:\\n    ./app/page.tsx [Client Component SSR]\\n    ./app/page.tsx [Server Component]\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.310","source":"Browser","level":"ERROR","message":"./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.310","source":"Server","level":"ERROR","message":"[browser] \"./app/page.tsx:4:1\\nModule not found: Can't resolve '@/components/ui/button'\\n  2 | import { useEffect, useState } from 'react';\\n  3 | import SectorCard from '@/components/SectorCard';\\n> 4 | import { Button } from '@/components/ui/button';\\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  5 | import { RefreshCw } from 'lucide-react';\\n  6 |\\n  7 | export default function Home() {\\n\\nImport traces:\\n  Client Component Browser:\\n    ./app/page.tsx [Client Component Browser]\\n    ./app/page.tsx [Server Component]\\n\\n  Client Component SSR:\\n    ./app/page.tsx [Client Component SSR]\\n    ./app/page.tsx [Server Component]\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.310","source":"Browser","level":"ERROR","message":"./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.371","source":"Server","level":"ERROR","message":"[browser] \"./app/layout.tsx:2:1\\nModule not found: Can't resolve './globals.css'\\n  1 | import type { Metadata } from 'next';\\n> 2 | import './globals.css';           // ← This line was failing\\n    | ^^^^^^^^^^^^^^^^^^^^^^^\\n  3 |\\n  4 | export const metadata: Metadata = {\\n  5 |   title: 'Sector Cycle Tracker',\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.371","source":"Browser","level":"ERROR","message":"./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.371","source":"Server","level":"ERROR","message":"[browser] \"./app/page.tsx:3:1\\nModule not found: Can't resolve '@/components/SectorCard'\\n  1 | 'use client';\\n  2 | import { useEffect, useState } from 'react';\\n> 3 | import SectorCard from '@/components/SectorCard';\\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  4 | import { Button } from '@/components/ui/button';\\n  5 | import { RefreshCw } from 'lucide-react';\\n  6 |\\n\\nImport traces:\\n  Client Component Browser:\\n    ./app/page.tsx [Client Component Browser]\\n    ./app/page.tsx [Server Component]\\n\\n  Client Component SSR:\\n    ./app/page.tsx [Client Component SSR]\\n    ./app/page.tsx [Server Component]\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.371","source":"Browser","level":"ERROR","message":"./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.372","source":"Server","level":"ERROR","message":"[browser] \"./app/page.tsx:4:1\\nModule not found: Can't resolve '@/components/ui/button'\\n  2 | import { useEffect, useState } from 'react';\\n  3 | import SectorCard from '@/components/SectorCard';\\n> 4 | import { Button } from '@/components/ui/button';\\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  5 | import { RefreshCw } from 'lucide-react';\\n  6 |\\n  7 | export default function Home() {\\n\\nImport traces:\\n  Client Component Browser:\\n    ./app/page.tsx [Client Component Browser]\\n    ./app/page.tsx [Server Component]\\n\\n  Client Component SSR:\\n    ./app/page.tsx [Client Component SSR]\\n    ./app/page.tsx [Server Component]\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.372","source":"Browser","level":"ERROR","message":"./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.395","source":"Browser","level":"ERROR","message":"./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.396","source":"Browser","level":"ERROR","message":"./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.396","source":"Browser","level":"ERROR","message":"./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.472","source":"Browser","level":"ERROR","message":"./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.472","source":"Browser","level":"ERROR","message":"./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.472","source":"Browser","level":"ERROR","message":"./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.474","source":"Server","level":"ERROR","message":"[browser] \"./app/layout.tsx:2:1\\nModule not found: Can't resolve './globals.css'\\n  1 | import type { Metadata } from 'next';\\n> 2 | import './globals.css';           // ← This line was failing\\n    | ^^^^^^^^^^^^^^^^^^^^^^^\\n  3 |\\n  4 | export const metadata: Metadata = {\\n  5 |   title: 'Sector Cycle Tracker',\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.474","source":"Browser","level":"ERROR","message":"./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.476","source":"Server","level":"ERROR","message":"[browser] \"./app/page.tsx:3:1\\nModule not found: Can't resolve '@/components/SectorCard'\\n  1 | 'use client';\\n  2 | import { useEffect, useState } from 'react';\\n> 3 | import SectorCard from '@/components/SectorCard';\\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  4 | import { Button } from '@/components/ui/button';\\n  5 | import { RefreshCw } from 'lucide-react';\\n  6 |\\n\\nImport traces:\\n  Client Component Browser:\\n    ./app/page.tsx [Client Component Browser]\\n    ./app/page.tsx [Server Component]\\n\\n  Client Component SSR:\\n    ./app/page.tsx [Client Component SSR]\\n    ./app/page.tsx [Server Component]\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.477","source":"Browser","level":"ERROR","message":"./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.477","source":"Server","level":"ERROR","message":"[browser] \"./app/page.tsx:4:1\\nModule not found: Can't resolve '@/components/ui/button'\\n  2 | import { useEffect, useState } from 'react';\\n  3 | import SectorCard from '@/components/SectorCard';\\n> 4 | import { Button } from '@/components/ui/button';\\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  5 | import { RefreshCw } from 'lucide-react';\\n  6 |\\n  7 | export default function Home() {\\n\\nImport traces:\\n  Client Component Browser:\\n    ./app/page.tsx [Client Component Browser]\\n    ./app/page.tsx [Server Component]\\n\\n  Client Component SSR:\\n    ./app/page.tsx [Client Component SSR]\\n    ./app/page.tsx [Server Component]\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.478","source":"Browser","level":"ERROR","message":"./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.617","source":"Server","level":"ERROR","message":"[browser] \"./app/layout.tsx:2:1\\nModule not found: Can't resolve './globals.css'\\n  1 | import type { Metadata } from 'next';\\n> 2 | import './globals.css';           // ← This line was failing\\n    | ^^^^^^^^^^^^^^^^^^^^^^^\\n  3 |\\n  4 | export const metadata: Metadata = {\\n  5 |   title: 'Sector Cycle Tracker',\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.617","source":"Browser","level":"ERROR","message":"./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.617","source":"Server","level":"ERROR","message":"[browser] \"./app/page.tsx:3:1\\nModule not found: Can't resolve '@/components/SectorCard'\\n  1 | 'use client';\\n  2 | import { useEffect, useState } from 'react';\\n> 3 | import SectorCard from '@/components/SectorCard';\\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  4 | import { Button } from '@/components/ui/button';\\n  5 | import { RefreshCw } from 'lucide-react';\\n  6 |\\n\\nImport traces:\\n  Client Component Browser:\\n    ./app/page.tsx [Client Component Browser]\\n    ./app/page.tsx [Server Component]\\n\\n  Client Component SSR:\\n    ./app/page.tsx [Client Component SSR]\\n    ./app/page.tsx [Server Component]\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.618","source":"Browser","level":"ERROR","message":"./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.618","source":"Server","level":"ERROR","message":"[browser] \"./app/page.tsx:4:1\\nModule not found: Can't resolve '@/components/ui/button'\\n  2 | import { useEffect, useState } from 'react';\\n  3 | import SectorCard from '@/components/SectorCard';\\n> 4 | import { Button } from '@/components/ui/button';\\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  5 | import { RefreshCw } from 'lucide-react';\\n  6 |\\n  7 | export default function Home() {\\n\\nImport traces:\\n  Client Component Browser:\\n    ./app/page.tsx [Client Component Browser]\\n    ./app/page.tsx [Server Component]\\n\\n  Client Component SSR:\\n    ./app/page.tsx [Client Component SSR]\\n    ./app/page.tsx [Server Component]\\n\\nhttps://nextjs.org/docs/messages/module-not-found\" \"\""}
+{"timestamp":"00:00:15.618","source":"Browser","level":"ERROR","message":"./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found \"\""}
+{"timestamp":"00:00:15.633","source":"Browser","level":"ERROR","message":"./app/layout.tsx:2:1\nModule not found: Can't resolve './globals.css'\n  1 | import type { Metadata } from 'next';\n> 2 | import './globals.css';           // ← This line was failing\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n  3 |\n  4 | export const metadata: Metadata = {\n  5 |   title: 'Sector Cycle Tracker',\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.633","source":"Browser","level":"ERROR","message":"./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:15.633","source":"Browser","level":"ERROR","message":"./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:47.018","source":"Server","level":"ERROR","message":"⨯ ./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:47.019","source":"Server","level":"ERROR","message":"⨯ ./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:47.019","source":"Server","level":"ERROR","message":"⨯ ./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:47.019","source":"Server","level":"ERROR","message":"⨯ ./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:47.019","source":"Server","level":"ERROR","message":"⨯ ./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:47.021","source":"Server","level":"ERROR","message":"⨯ ./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:47.022","source":"Server","level":"ERROR","message":"⨯ ./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:47.025","source":"Server","level":"ERROR","message":"⨯ ./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:47.147","source":"Server","level":"ERROR","message":"⨯ ./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n\n\n./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:48.015","source":"Browser","level":"ERROR","message":"uncaughtError: Error: ./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n"}
+{"timestamp":"00:00:48.050","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mUncaught Error: ./app/page.tsx:3:1\\nModule not found: Can't resolve '@/components/SectorCard'\\n  1 | 'use client';\\n  2 | import { useEffect, useState } from 'react';\\n> 3 | import SectorCard from '@/components/SectorCard';\\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  4 | import { Button } from '@/components/ui/button';\\n  5 | import { RefreshCw } from 'lucide-react';\\n  6 |\\n\\n\\n\\nImport traces:\\n  Client Component Browser:\\n    ./app/page.tsx [Client Component Browser]\\n    ./app/page.tsx [Server Component]\\n\\n  Client Component SSR:\\n    ./app/page.tsx [Client Component SSR]\\n    ./app/page.tsx [Server Component]\\n\\nhttps://nextjs.org/docs/messages/module-not-found\\n\\n\\u001b[39m\\n\\u001b[31m    at <unknown> (Error: ./app/page.tsx:3:1)\\n    at <unknown> (https://nextjs.org/docs/messages/module-not-found)\\n    at <unknown> (Error: (./app/page.tsx:3:1)\\n    at <unknown> (https://nextjs.org/docs/messages/module-not-found)\\u001b[39m\""}
+{"timestamp":"00:00:48.050","source":"Browser","level":"ERROR","message":"\u001b[31mUncaught Error: ./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\n\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n\u001b[39m\n\u001b[31m    at <unknown> (Error: ./app/page.tsx:3:1)\n    at <unknown> (https://nextjs.org/docs/messages/module-not-found)\n    at <unknown> (Error: (./app/page.tsx:3:1)\n    at <unknown> (https://nextjs.org/docs/messages/module-not-found)\u001b[39m"}
+{"timestamp":"00:00:49.015","source":"Browser","level":"ERROR","message":"./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:49.015","source":"Browser","level":"ERROR","message":"./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:49.015","source":"Browser","level":"ERROR","message":"./app/page.tsx:3:1\nModule not found: Can't resolve '@/components/SectorCard'\n  1 | 'use client';\n  2 | import { useEffect, useState } from 'react';\n> 3 | import SectorCard from '@/components/SectorCard';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  4 | import { Button } from '@/components/ui/button';\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}
+{"timestamp":"00:00:49.015","source":"Browser","level":"ERROR","message":"./app/page.tsx:4:1\nModule not found: Can't resolve '@/components/ui/button'\n  2 | import { useEffect, useState } from 'react';\n  3 | import SectorCard from '@/components/SectorCard';\n> 4 | import { Button } from '@/components/ui/button';\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  5 | import { RefreshCw } from 'lucide-react';\n  6 |\n  7 | export default function Home() {\n\nImport traces:\n  Client Component Browser:\n    ./app/page.tsx [Client Component Browser]\n    ./app/page.tsx [Server Component]\n\n  Client Component SSR:\n    ./app/page.tsx [Client Component SSR]\n    ./app/page.tsx [Server Component]\n\nhttps://nextjs.org/docs/messages/module-not-found"}

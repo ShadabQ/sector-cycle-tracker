@@ -1,0 +1,17 @@
+/* [project]/app/globals.css [app-client] (css) */
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+  }
+}
+
+@apply bg-zinc-950 text-white;
+
+/*# sourceMappingURL=app_globals_0jn8.0u.css.map*/
